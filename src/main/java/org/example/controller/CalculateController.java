@@ -23,7 +23,7 @@ public class CalculateController{
 
     @GetMapping(value = "/api/hello", produces = MediaType.APPLICATION_JSON_VALUE)
     public String get(){
-        return "200";
+        return "300";
     }
 
     private LocalDate parseToDate(String date){
