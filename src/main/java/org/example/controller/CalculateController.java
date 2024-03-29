@@ -21,6 +21,11 @@ public class CalculateController{
         return calculateService.getSalary(averageSalary, parseToDate(startDateOfVacation), parseToDate(endDateOfVacation));
     }
 
+    @GetMapping(value = "/api/hello", produces = MediaType.APPLICATION_JSON_VALUE)
+    public String get(){
+        return "200";
+    }
+
     private LocalDate parseToDate(String date){
         return LocalDate.parse(date, DateTimeFormatter.ofPattern("dd.MM.yyyy"));
     }
